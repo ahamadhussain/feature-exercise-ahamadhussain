@@ -26,11 +26,10 @@ class ItemWithComboPrice extends ItemWithUnitPrice implements ItemPriceInterface
      *
      * @param array $item
      *
-     * @return int
+     * @return float
      */
     public function calculatePrice(array $item)
     {
-
         $itemAQuantity = $this->getItemQuantity(self::COMBO_OFFER_ITEM);
         $itemDQuantity = $item['quantity'];
         $unitPrice = $item['price'];
